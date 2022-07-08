@@ -1,12 +1,18 @@
-FROM ghcr.io/mooreryan/ocaml_alpine:4-14-2022-07-04-81d01c2
+# FROM ghcr.io/mooreryan/ocaml_alpine:4-14-2022-07-04-81d01c2
 
-USER root
+# USER root
 
-RUN apk add git
+# RUN apk add git
 
-USER runner
+# USER runner
+
+# RUN opam install \
+#     ocamlfind
+
+# WORKDIR /home/runner
+
+
+FROM ocamlpro/ocaml:4.14-2022-07-04
 
 RUN opam install \
     ocamlfind
-
-WORKDIR /home/runner
