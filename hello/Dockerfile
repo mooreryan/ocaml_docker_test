@@ -16,7 +16,7 @@ FROM ocamlpro/ocaml:4.14-2022-07-04
 
 USER ocaml
 
-RUN opam switch create hehe
+RUN opam switch create hehe ocaml-system
 
 RUN opam install \
     ocamlfind
